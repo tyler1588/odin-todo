@@ -1,12 +1,5 @@
-import _ from 'lodash';
+import navbar from './navbar';
+import './styles.css';
+// import navbar from './navbar';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+navbar();

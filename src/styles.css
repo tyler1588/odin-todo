@@ -1,0 +1,17 @@
+/* Root */
+body {
+    margin: 0;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar > h1 {
+    margin-left: 1rem;
+}
