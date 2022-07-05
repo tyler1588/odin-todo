@@ -7,6 +7,7 @@ function modal(){
     container.appendChild(modal);
 
     const modalForm = document.createElement('form');
+    modalForm.classList.add('todo-input-form');
     modal.appendChild(modalForm);
 
     const todoInput = document.createElement('input');
