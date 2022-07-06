@@ -23,6 +23,10 @@ body {
 
 table {
     width: 100%;
-    border-bottom: solid;
     color: black;
+}
+
+td {
+    border-bottom: solid;
+    border-color: black;
 }

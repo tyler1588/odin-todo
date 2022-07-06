@@ -10,7 +10,16 @@ function submitTodo() {
         const formdata = new FormData(form);
         const input = formdata.get('todo');
         todoArray.push(input)
-        alert(todoArray)
+
+        const todos = document.querySelector('table');
+
+        const tr = document.createElement('tr');
+        todos.appendChild(tr);
+
+        const td = document.createElement('td');
+        td.innerHTML = input;
+        tr.appendChild(td);
+
     });
 };
 
