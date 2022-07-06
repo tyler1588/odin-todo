@@ -1,19 +1,22 @@
-import todoArray from "./todoArray";
-
 function displayTodo() {
     const container = document.querySelector('.container');
+    const userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
 
     const todos = document.createElement('table');
     container.appendChild(todos);
 
-    for (let i = 0; i < todoArray.length; i++){
-        const tr = document.createElement('tr');
-        todos.appendChild(tr);
+    console.log(userTodos);
 
-        const td = document.createElement('td');
-        td.innerHTML = todoArray[i];
-        tr.appendChild(td);
-    }
+    if (userTodos){
+        for (let i = 0; i < userTodos.length; i++){
+            const tr = document.createElement('tr');
+            todos.appendChild(tr);
+    
+            const td = document.createElement('td');
+            td.innerHTML = userTodos[i];
+            tr.appendChild(td);
+        }
+    }    
 }
 
 export default displayTodo

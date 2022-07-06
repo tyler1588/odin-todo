@@ -11,6 +11,8 @@ function submitTodo() {
         const input = formdata.get('todo');
         todoArray.push(input)
 
+        window.localStorage.setItem("userTodos", JSON.stringify(todoArray));
+
         const todos = document.querySelector('table');
 
         const tr = document.createElement('tr');

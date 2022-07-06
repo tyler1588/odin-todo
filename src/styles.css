@@ -27,6 +27,7 @@ table {
 }
 
 td {
+    padding: 1rem;
     border-bottom: solid;
     border-color: black;
 }

@@ -10,6 +10,8 @@ modal();
 submitTodo();
 displayTodo();
 
+// localStorage.clear()
+
 
 
 
