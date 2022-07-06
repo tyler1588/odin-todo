@@ -13,7 +13,8 @@ function displayTodo() {
             todos.appendChild(tr);
     
             const td = document.createElement('td');
-            td.innerHTML = userTodos[i];
+            td.innerHTML = userTodos[i].text;
+            td.classList.add(i)
             tr.appendChild(td);
         }
     }    

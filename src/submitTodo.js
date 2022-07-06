@@ -1,4 +1,5 @@
 import todoArray from "./todoArray";
+import createTodo from "./createTodo";
 
 function submitTodo() {
     const form = document.querySelector('.todo-input-form');
@@ -9,7 +10,10 @@ function submitTodo() {
         modal.close();
         const formdata = new FormData(form);
         const input = formdata.get('todo');
-        todoArray.push(input)
+
+        const todo = new createTodo(input);
+
+        todoArray.push(todo);
 
         window.localStorage.setItem("userTodos", JSON.stringify(todoArray));
 
@@ -20,6 +24,7 @@ function submitTodo() {
 
         const td = document.createElement('td');
         td.innerHTML = input;
+        td.classList.add(todoArray.length-1);
         tr.appendChild(td);
 
     });
