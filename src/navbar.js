@@ -10,7 +10,7 @@ function navbar(){
     navbar.appendChild(title);
 
     const button = document.createElement('button');
-    button.innerHTML = '+';
+    button.innerHTML = '+ Add';
     button.classList.add('open-modal');
     navbar.appendChild(button);
 }

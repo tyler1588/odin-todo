@@ -1,11 +1,9 @@
 function displayTodo() {
     const container = document.querySelector('.container');
-    const userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
-
+    let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
+    
     const todos = document.createElement('table');
     container.appendChild(todos);
-
-    console.log(userTodos);
 
     if (userTodos){
         for (let i = 0; i < userTodos.length; i++){
@@ -14,8 +12,10 @@ function displayTodo() {
     
             const td = document.createElement('td');
             td.innerHTML = userTodos[i].text;
-            td.classList.add(i)
+            td.classList.add("todo");
+            td.setAttribute('id', userTodos[i].key);
             tr.appendChild(td);
+
         }
     }    
 }

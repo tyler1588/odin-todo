@@ -1,6 +1,7 @@
 class createTodo {
-    constructor(text) {
-      this.text = text;
+    constructor(key, text) {
+        this.key = key
+        this.text = text;
     }
 }
 
