@@ -6,7 +6,7 @@ function navbar(){
     container.appendChild(navbar);
 
     const title = document.createElement('h1');
-    title.innerHTML = 'todo';
+    title.innerHTML = 'Todo';
     navbar.appendChild(title);
 
     const button = document.createElement('button');

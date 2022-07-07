@@ -1,4 +1,4 @@
-import deleteIcon from './img/deleteIcon.svg'
+import deleteIcon from './assets/deleteIcon.svg'
 
 function displayTodo() {
     const container = document.querySelector('.container');

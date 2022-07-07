@@ -4,6 +4,7 @@ import './styles.css';
 import submitTodo from './submitTodo';
 import displayTodo from './displayTodo';
 import deleteTodo from './deleteTodo';
+import displayProjects from './displayProjects';
 
 
 window.onload = function(){
@@ -11,6 +12,7 @@ window.onload = function(){
     modal();
     submitTodo();
     displayTodo();
+    displayProjects();
     deleteTodo();
 }
 
