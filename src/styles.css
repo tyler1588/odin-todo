@@ -22,21 +22,37 @@ body {
     margin-right: 1rem;
 }
 
-table {
+.todoContainer {
     width: 100%;
     border-spacing: 1rem;
     color: black;
 }
 
-td {
+.todo {
     border-radius: 10px;
     background-color: white;
-    padding: 1rem;
     border-color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
     transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-td:hover {
+.todo:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: 0.4s;
+}
+
+.deleteButton {
+    height: 1.5rem;
+    transition: 0.3s;
+
+}
+
+.deleteButton:hover {
+    filter: invert(28%) sepia(47%) saturate(7251%) hue-rotate(340deg) brightness(91%) contrast(103%);
+    transition: 0.2s;
 }

@@ -1,20 +1,28 @@
+import deleteIcon from './img/deleteIcon.svg'
+
 function displayTodo() {
     const container = document.querySelector('.container');
     let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
     
-    const todos = document.createElement('table');
-    container.appendChild(todos);
+    const todoContainer = document.createElement('div');
+    todoContainer.classList.add("todoContainer");
+    container.appendChild(todoContainer);
 
     if (userTodos){
         for (let i = 0; i < userTodos.length; i++){
-            const tr = document.createElement('tr');
-            todos.appendChild(tr);
+            const todo = document.createElement('div');
+            todo.classList.add("todo");
+            todo.setAttribute('id', userTodos[i].key);
+            todoContainer.appendChild(todo);
     
-            const td = document.createElement('td');
-            td.innerHTML = userTodos[i].text;
-            td.classList.add("todo");
-            td.setAttribute('id', userTodos[i].key);
-            tr.appendChild(td);
+            const todoText = document.createElement('h3');
+            todoText.innerHTML = userTodos[i].text;
+            todo.appendChild(todoText);
+            
+            const deleteButton = new Image();
+            deleteButton.src = deleteIcon;
+            deleteButton.classList.add("deleteButton");
+            todo.appendChild(deleteButton);
 
         }
     }    
