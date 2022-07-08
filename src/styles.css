@@ -1,4 +1,9 @@
 /* Root */
+:root{
+    --dark: #393E46;
+    --grey: #AAAAAA;
+    --lightgrey: #DEDEDE;
+}
 
 @font-face {
     font-family: 'Roboto';
@@ -24,7 +29,7 @@ body {
     grid-column-end: 100;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: black;
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,34 +39,56 @@ body {
     margin-left: 1rem;
 }
 
-.navbar > button {
-    margin-right: 1rem;
-}
-
 
 /* Projects */
-
 .projectsContainer {
     grid-column-start: 1;
-    grid-column-end: 20;
+    grid-column-end: 10;
     grid-row-start: 2;
     grid-row-end: 100;
-    background-color: lightgrey;
+    background-color: var(--grey);
+}
+
+.projectsContainer > h2 {
+    padding-left: 1rem;
+    color: var(--dark);
+}
+
+.projectsContainer > h3 {
+    padding-left: 2rem;
 }
     
     
 /* Todos */
-.todoContainer {
-    grid-column-start: 20;
+.todoSection {
+    grid-column-start: 10;
     grid-column-end: 100;
     grid-row-start: 2;
     grid-row-end: 100;
-    color: black;
+}
+
+.todoHeadSection {
+    display: flex;
+    align-items: center;
+}
+
+.todoHeadSection > h2 {
+    color: var(--dark);
+    padding-left: 1rem;
+    margin-right: 1rem;
+}
+
+.open-todo-modal {
+    height: fit-content;
+}
+
+.todoContainer {
+    color: var(--dark)
 }
 
 .todo {
     border-radius: 10px;
-    background-color: lightgrey;
+    background-color: var(--lightgrey);
     border-color: black;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -80,7 +107,6 @@ body {
 .deleteButton {
     height: 1.5rem;
     transition: 0.3s;
-
 }
 
 .deleteButton:hover {

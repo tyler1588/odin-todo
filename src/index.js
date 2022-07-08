@@ -9,10 +9,10 @@ import displayProjects from './displayProjects';
 
 window.onload = function(){
     navbar();
+    displayProjects();
+    displayTodo();
     modal();
     submitTodo();
-    displayTodo();
-    displayProjects();
     deleteTodo();
 }
 

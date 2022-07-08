@@ -20,7 +20,7 @@ function modal(){
     formSubmit.value = 'Submit';
     modalForm.appendChild(formSubmit);
 
-    const openModal = document.querySelector('.open-modal');
+    const openModal = document.querySelector('.open-todo-modal');
 
     openModal.addEventListener('click', () => {
         modal.showModal();
