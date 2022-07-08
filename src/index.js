@@ -6,6 +6,7 @@ import displayTodo from './displayTodo';
 import deleteTodo from './deleteTodo';
 import displayProjects from './displayProjects';
 import projectModal from './projectModal';
+import submitProject from './submitProject';
 
 
 window.onload = function(){
@@ -15,6 +16,7 @@ window.onload = function(){
     todoModal();
     projectModal();
     submitTodo();
+    submitProject();
     deleteTodo();
 }
 

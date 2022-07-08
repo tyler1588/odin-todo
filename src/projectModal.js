@@ -9,10 +9,10 @@ function projectModal(){
     modalForm.classList.add('project-input-form');
     modal.appendChild(modalForm);
 
-    const todoInput = document.createElement('input');
-    todoInput.type = 'text';
-    todoInput.name = 'project';
-    modalForm.appendChild(todoInput);
+    const projectInput = document.createElement('input');
+    projectInput.type = 'text';
+    projectInput.name = 'project';
+    modalForm.appendChild(projectInput);
 
     const formSubmit = document.createElement('input');
     formSubmit.type = 'submit';

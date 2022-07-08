@@ -1,6 +1,6 @@
 let projectArray = [];
-if (JSON.parse(window.localStorage.getItem("projects")) != null){
-    todoArray = JSON.parse(window.localStorage.getItem("projects"));
+if (JSON.parse(window.localStorage.getItem("userProjects")) != null){
+    projectArray = JSON.parse(window.localStorage.getItem("userProjects"));
 }
 
 export default projectArray
