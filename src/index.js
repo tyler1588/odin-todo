@@ -14,14 +14,14 @@ window.onload = function(){
     navbar();
     displayProjects();
     selectProject();
-    displayTodo();
+    displayTodo("Inbox");
     todoModal();
     projectModal();
     submitTodo();
     submitProject();
     deleteTodo();
     
-    
+
 }
 
 
