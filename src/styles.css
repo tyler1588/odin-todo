@@ -41,27 +41,36 @@ body {
 
 
 /* Projects */
-.projectsContainer {
-    grid-column-start: 1;
-    grid-column-end: 10;
+.projectSection {
     grid-row-start: 2;
     grid-row-end: 100;
     background-color: var(--grey);
 }
 
-.projectsContainer > h2 {
-    padding-left: 1rem;
-    color: var(--dark);
+.projectHeadSection {
+    display: flex;
+    align-items: center;
 }
 
-.projectsContainer > h3 {
+.projectHeadSection > h2 {
+    padding-left: 1rem;
+    color: var(--dark);
+    margin-right: 1rem;
+}
+
+.projectSection > h3 {
     padding-left: 2rem;
 }
     
+.open-project-modal {
+    height: fit-content;
+    margin-right: 0;
+    padding-right: 0;
+}
     
 /* Todos */
 .todoSection {
-    grid-column-start: 10;
+    grid-column-start: 2;
     grid-column-end: 100;
     grid-row-start: 2;
     grid-row-end: 100;

@@ -1,17 +1,26 @@
 function displayProjects(){
     const container = document.querySelector('.container');
 
-    const projectsContainer = document.createElement('div');
-    projectsContainer.classList.add("projectsContainer");
-    container.appendChild(projectsContainer);
+    const projectSection = document.createElement('div');
+    projectSection.classList.add("projectSection");
+    container.appendChild(projectSection);
+
+    const projectHeadSection = document.createElement('div');
+    projectHeadSection.classList.add("projectHeadSection");
+    projectSection.appendChild(projectHeadSection);
 
     const header = document.createElement('h2');
     header.innerHTML = 'Projects';
-    projectsContainer.appendChild(header);
+    projectHeadSection.appendChild(header);
+
+    const button = document.createElement('button');
+    button.innerHTML = '+ Add Project';
+    button.classList.add('open-project-modal');
+    projectHeadSection.appendChild(button);
 
     const inbox = document.createElement('h3');
     inbox.innerHTML = 'Index';
-    projectsContainer.appendChild(inbox);
+    projectSection.appendChild(inbox);
 
 }
 
