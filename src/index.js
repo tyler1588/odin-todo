@@ -7,17 +7,21 @@ import deleteTodo from './deleteTodo';
 import displayProjects from './displayProjects';
 import projectModal from './projectModal';
 import submitProject from './submitProject';
+import selectProject from './selectProject';
 
 
 window.onload = function(){
     navbar();
     displayProjects();
+    selectProject();
     displayTodo();
     todoModal();
     projectModal();
     submitTodo();
     submitProject();
     deleteTodo();
+    
+    
 }
 
 

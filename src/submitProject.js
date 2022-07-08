@@ -8,20 +8,22 @@ function submitProject() {
         const formdata = new FormData(form);
         const input = formdata.get('project');
 
-        let projectCounter = 0;
-        if (JSON.parse(window.localStorage.getItem("userProjects")) != null){
-            let currentCount = JSON.parse(window.localStorage.getItem("userProjects"));
+        let projectCounter = 1;
+        if (JSON.parse(window.localStorage.getItem("projectCounter")) != null){
+            projectCounter = JSON.parse(window.localStorage.getItem("projectCounter"));
             projectCounter = projectCounter + 1;
         }
 
         window.localStorage.setItem("projectCounter", JSON.stringify(projectCounter));
         let key = JSON.parse(window.localStorage.getItem("projectCounter"));
 
+
         const project = new createProject(key, input);
 
         projectArray.push(project);
 
         window.localStorage.setItem("userProjects", JSON.stringify(projectArray));
+
 
     });
 };

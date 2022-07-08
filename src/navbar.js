@@ -9,7 +9,6 @@ function navbar(){
     title.innerHTML = 'Todo';
     navbar.appendChild(title);
 
-    
 }
 
 export default navbar

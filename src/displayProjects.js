@@ -4,8 +4,6 @@ function displayProjects(){
     const container = document.querySelector('.container');
     let userProjects = JSON.parse(window.localStorage.getItem("userProjects"));
 
-    console.log(userProjects);
-
     const projectSection = document.createElement('div');
     projectSection.classList.add("projectSection");
     container.appendChild(projectSection);
@@ -19,16 +17,22 @@ function displayProjects(){
     projectHeadSection.appendChild(header);
 
     const button = document.createElement('button');
-    button.innerHTML = '+ Add Project';
+    button.innerHTML = '+';
     button.classList.add('open-project-modal');
     projectHeadSection.appendChild(button);
 
-    const inbox = document.createElement('h3');
-    inbox.innerHTML = 'Index';
-    projectSection.appendChild(inbox);
+    const project = document.createElement('div');
+    project.classList.add("project");
+    project.setAttribute('id', 0);
+    projectSection.appendChild(project);
+    
+    const projectText = document.createElement('h3');
+    projectText.innerHTML = "Inbox";
+    project.appendChild(projectText);
+
 
     if (userProjects){
-        for (let i = 0; i < userProjects.length; i++){
+        for (let i = 1; i < userProjects.length; i++){
             const project = document.createElement('div');
             project.classList.add("project");
             project.setAttribute('id', userProjects[i].key);

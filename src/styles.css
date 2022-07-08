@@ -23,6 +23,20 @@ body {
     height: 100vh;
 }
 
+button {
+    background-color: var(--dark);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #4168a7;
+    transition: 0.3s;
+}
+
 /* Navbar */
 .navbar {
     grid-column-start: 1;
@@ -42,10 +56,12 @@ body {
 
 /* Projects */
 .projectSection {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    grid-column-start: 1;
+    grid-column-end: 10;
     grid-row-start: 2;
     grid-row-end: 100;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: var(--grey);
 }
 
@@ -56,7 +72,7 @@ body {
 }
 
 .projectHeadSection > h2 {
-    color: var(--dark);
+    color: white;
 }
 
 
@@ -67,18 +83,25 @@ body {
 .open-project-modal {
     height: fit-content;
     margin-right: 0;
-    padding-right: 0;
 }
 
-.project {
+.project, .projectSection > h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding-left: 1rem;
+}
+
+.project:hover, .projectSection > h3:hover {
+    background-color: grey;
+    transition: 0.3s;
 }
     
 /* Todos */
 .todoSection {
-    grid-column-start: 2;
+    grid-column-start: 10;
     grid-column-end: 100;
     grid-row-start: 2;
     grid-row-end: 100;
@@ -87,6 +110,8 @@ body {
 .todoHeadSection {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
 }
 
 .todoHeadSection > h2 {
@@ -116,7 +141,7 @@ body {
     align-items: center;
 }
 
-.todo:hover {
+.todo:hover, button:hover, .project:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: 0.4s;
 }

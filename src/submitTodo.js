@@ -7,6 +7,7 @@ function submitTodo() {
     form.addEventListener('submit', () => {
         const formdata = new FormData(form);
         const input = formdata.get('todo');
+        const selectedProject = document.querySelector('.selectedProject').innerHTML;
 
         let todoCounter = 0;
         if (JSON.parse(window.localStorage.getItem("todoCounter")) != null){
@@ -17,7 +18,7 @@ function submitTodo() {
         window.localStorage.setItem("todoCounter", JSON.stringify(todoCounter));
         let key = JSON.parse(window.localStorage.getItem("todoCounter"));
 
-        const todo = new createTodo(key, input);
+        const todo = new createTodo(key, input, selectedProject);
 
         todoArray.push(todo);
 
