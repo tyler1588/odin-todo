@@ -1,6 +1,6 @@
 import deleteIcon from './assets/deleteIcon.svg'
 
-function displayProjects(){
+export default function displayProjects(){
     const container = document.querySelector('.container');
     let userProjects = JSON.parse(window.localStorage.getItem("userProjects"));
 
@@ -55,5 +55,3 @@ function displayProjects(){
     }    
 
 }
-
-export default displayProjects

@@ -1,4 +1,4 @@
-function todoModal(){
+export default function todoModal(){
     const container = document.querySelector('.container');
 
     const modal = document.createElement('dialog');
@@ -25,5 +25,3 @@ function todoModal(){
         modal.showModal();
     })
 }
-
-export default todoModal

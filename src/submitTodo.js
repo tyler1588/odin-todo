@@ -1,7 +1,8 @@
 import todoArray from "./todoArray";
 import createTodo from "./createTodo";
+import selectProject from "./selectProject";
 
-function submitTodo() {
+export default function submitTodo() {
     const form = document.querySelector('.todo-input-form');
     
     form.addEventListener('submit', (e) => {
@@ -9,10 +10,6 @@ function submitTodo() {
         const formdata = new FormData(form);
         const input = formdata.get('todo');
         const selectedProject = document.querySelector('.selectedProject').innerHTML;
-
-        sessionStorage.setItem('selection', selectedProject);
-
-        window.location.reload();
 
         let todoCounter = 0;
         if (JSON.parse(window.localStorage.getItem("todoCounter")) != null){
@@ -24,11 +21,10 @@ function submitTodo() {
         let key = JSON.parse(window.localStorage.getItem("todoCounter"));
 
         const todo = new createTodo(key, input, selectedProject);
-
         todoArray.push(todo);
-
         window.localStorage.setItem("userTodos", JSON.stringify(todoArray));
+        window.location.reload();
+
+        selectProject();
     });
 };
-
-export default submitTodo

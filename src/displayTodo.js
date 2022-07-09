@@ -1,6 +1,6 @@
 import deleteIcon from './assets/deleteIcon.svg'
 
-function displayTodo(selected) {
+export default function displayTodo(selected) {
     const container = document.querySelector('.mainSection');
     let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
 
@@ -57,5 +57,3 @@ function displayTodo(selected) {
         }
     }    
 }
-
-export default displayTodo

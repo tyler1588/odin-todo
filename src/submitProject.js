@@ -1,7 +1,7 @@
 import projectArray from "./projectArray";
 import createProject from "./createProject";
 
-function submitProject() {
+export default function submitProject() {
     const form = document.querySelector('.project-input-form');
     
     form.addEventListener('submit', () => {
@@ -27,5 +27,3 @@ function submitProject() {
 
     });
 };
-
-export default submitProject

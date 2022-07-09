@@ -1,4 +1,4 @@
-function projectModal(){
+export default function projectModal(){
     const container = document.querySelector('.container');
 
     const modal = document.createElement('dialog');
@@ -25,5 +25,3 @@ function projectModal(){
         modal.showModal();
     })
 }
-
-export default projectModal

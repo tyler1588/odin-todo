@@ -1,4 +1,4 @@
-function navbar(){
+export default function navbar(){
     const container = document.querySelector('.container');
 
     const navbar = document.createElement('div');
@@ -10,5 +10,3 @@ function navbar(){
     navbar.appendChild(title);
 
 }
-
-export default navbar

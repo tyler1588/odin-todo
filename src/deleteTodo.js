@@ -1,5 +1,3 @@
-import todoArray from "./todoArray";
-
 export default function deleteTodo(){
     let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
     document.body.addEventListener('click', function(event) {
@@ -11,6 +9,9 @@ export default function deleteTodo(){
                         return el.key != event.target.parentElement.id
                     })
 
+                    const selectedProject = document.querySelector('.selectedProject').innerHTML;
+                    sessionStorage.setItem('selection', selectedProject);
+
                     //Update local storage to store the new array
                     window.localStorage.setItem("userTodos", JSON.stringify(newArray));
                     userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
@@ -18,6 +19,7 @@ export default function deleteTodo(){
                     //Remove elemts from DOM
                     const element = document.getElementById(event.target.parentElement.id);
                     element.remove();
+
                     window.location.reload();
                 }
             }

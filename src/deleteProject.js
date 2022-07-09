@@ -1,5 +1,3 @@
-import projectArray from './projectArray'
-
 export default function deleteProject(){
     let userProjects = JSON.parse(window.localStorage.getItem("userProjects"));
     document.body.addEventListener('click', function(event) {
