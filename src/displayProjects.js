@@ -4,9 +4,13 @@ function displayProjects(){
     const container = document.querySelector('.container');
     let userProjects = JSON.parse(window.localStorage.getItem("userProjects"));
 
+    const mainSection = document.createElement('div');
+    mainSection.classList.add("mainSection");
+    container.appendChild(mainSection);
+
     const projectSection = document.createElement('div');
     projectSection.classList.add("projectSection");
-    container.appendChild(projectSection);
+    mainSection.appendChild(projectSection);
 
     const projectHeadSection = document.createElement('div');
     projectHeadSection.classList.add("projectHeadSection");
@@ -44,7 +48,7 @@ function displayProjects(){
             
             const deleteButton = new Image();
             deleteButton.src = deleteIcon;
-            deleteButton.classList.add("deleteButton");
+            deleteButton.classList.add("deleteProjectButton");
             project.appendChild(deleteButton);
 
         }

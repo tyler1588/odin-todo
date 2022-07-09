@@ -4,10 +4,15 @@ import createTodo from "./createTodo";
 function submitTodo() {
     const form = document.querySelector('.todo-input-form');
     
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
         const formdata = new FormData(form);
         const input = formdata.get('todo');
         const selectedProject = document.querySelector('.selectedProject').innerHTML;
+
+        sessionStorage.setItem('selection', selectedProject);
+
+        window.location.reload();
 
         let todoCounter = 0;
         if (JSON.parse(window.localStorage.getItem("todoCounter")) != null){

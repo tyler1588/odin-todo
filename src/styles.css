@@ -19,7 +19,6 @@ body {
 }
 
 .container {
-    display: grid;
     height: 100vh;
 }
 
@@ -39,10 +38,6 @@ button:hover {
 
 /* Navbar */
 .navbar {
-    grid-column-start: 1;
-    grid-column-end: 100;
-    grid-row-start: 1;
-    grid-row-end: 2;
     background-color: var(--dark);
     display: flex;
     align-items: center;
@@ -54,15 +49,19 @@ button:hover {
 }
 
 
+.mainSection {
+    display: flex;
+    width: 100%;
+}
+
+
 /* Projects */
 .projectSection {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    grid-row-start: 2;
-    grid-row-end: 100;
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: var(--grey);
+    width: 20%;
+    min-height: 100vh;
 }
 
 .projectHeadSection {
@@ -101,10 +100,8 @@ button:hover {
     
 /* Todos */
 .todoSection {
-    grid-column-start: 10;
-    grid-column-end: 100;
-    grid-row-start: 2;
-    grid-row-end: 100;
+    width: 80%;
+    height: 100%;
 }
 
 .todoHeadSection {
@@ -146,12 +143,12 @@ button:hover {
     transition: 0.4s;
 }
 
-.deleteButton {
+.deleteButton, .deleteProjectButton {
     height: 1.5rem;
     transition: 0.3s;
 }
 
-.deleteButton:hover {
+.deleteButton:hover, .deleteProjectButton:hover {
     filter: invert(28%) sepia(47%) saturate(7251%) hue-rotate(340deg) brightness(91%) contrast(103%);
     transition: 0.2s;
 }

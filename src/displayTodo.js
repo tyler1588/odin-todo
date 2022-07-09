@@ -1,7 +1,7 @@
 import deleteIcon from './assets/deleteIcon.svg'
 
 function displayTodo(selected) {
-    const container = document.querySelector('.container');
+    const container = document.querySelector('.mainSection');
     let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
 
     const existing = document.querySelector('.todoSection');

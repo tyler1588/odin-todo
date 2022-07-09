@@ -1,6 +1,6 @@
 import todoArray from "./todoArray";
 
-function deleteTodo(){
+export default function deleteTodo(){
     let userTodos = JSON.parse(window.localStorage.getItem("userTodos"));
     document.body.addEventListener('click', function(event) {
         if (event.target.className === 'deleteButton'){
@@ -24,5 +24,3 @@ function deleteTodo(){
         }
     })
 }
-
-export default deleteTodo
